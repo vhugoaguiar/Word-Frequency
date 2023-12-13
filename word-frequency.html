@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word frequency counter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      table {
+        padding: 0.25rem;
+        margin: 0.3rem 0.3rem;
+      }
+      td {
+        border: 1px solid gray;
+        padding: 0.25rem 0.35rem;
+        min-width: 4rem;
+        text-align: center;
+        margin: 0.1rem;
+      }
+    </style>
+  </head>
+  <body class="bg-emerald-900">
+    <div
+      class="mx-auto flex flex-col bg-gray-50 items-center w-96 md:w-3/5 shadow-sm rounded-md my-6 p-6"
+    >
+      <header>
+        <h1 class="text-2xl font-semibold text-slate-800">
+          Word Frequency Counter
+        </h1>
+      </header>
+      <label for="text-input" class="mt-6 text-gray-500"
+        >Type or paste your text (max. 2048 characters):</label
+      >
+      <textarea
+        name="text-input"
+        id="text-input"
+        placeholder="Input text"
+        maxlength="2048"
+        cols="30"
+        rows="10"
+        class="w-72 md:w-96 h-36 focus:ring-1 focus:outline-none p-2 text-sm border border-solid border-gray-300 shadow-sm"
+      ></textarea>
+      <button
+        id="btn-translate"
+        class="bg-emerald-500 hover:bg-emerald-700 shadow-md transition duration-300 text-white font-semibold uppercase py-1 px-6 rounded-md mt-6"
+      >
+        Translate
+      </button>
+      <h1
+        class="uppercase font-semibold text-base border-b-2 border-emerald-600 mt-6"
+      >
+        Output
+      </h1>
+      <div
+        id="text-output"
+        class="bg-white p-2 text-sm mt-3 min-w-[160px] border border-emerald-600 border-opacity-30 mb-6 font-semibold uppercase shadow-sm flex justify-center items-start"
+      ></div>
+    </div>
+    <script src="word-frequency.js"></script>
+  </body>
+</html>
